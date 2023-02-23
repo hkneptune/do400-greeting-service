@@ -24,7 +24,7 @@ pipeline{
         stage('Deploy') {
             steps {
                 sh '''
-                oc project eambuk-greetings
+                oc project eambuk-deploy-strategies
                 oc start-build greeting-service --follow --wait
                 '''
             }
